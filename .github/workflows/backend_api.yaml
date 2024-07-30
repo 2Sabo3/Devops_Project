@@ -29,7 +29,7 @@ jobs:
 
             - name: Build and tag images to Amazon ECR
               env: 
-                ECR_REGISTRY: ${{steps.login-ecr.outputs.resgistry }}
+                ECR_REGISTRY: ${{ steps.login-ecr.outputs.resgistry }}
                 ECR_REPOSITORY: backend_api
                 IMAGE_TAG: latest
               run: docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . --file ./api/Dockerfile
