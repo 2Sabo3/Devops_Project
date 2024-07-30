@@ -1,6 +1,6 @@
 FROM node:16-alpine
 
-WORKDIR /front-end-nextjs
+WORKDIR /app
 
 COPY package*.json ./
 
