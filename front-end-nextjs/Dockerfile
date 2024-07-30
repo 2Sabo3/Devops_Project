@@ -2,7 +2,7 @@ FROM alpine:latest
 
 WORKDIR /front-end-nextjs
 
-COPY package.json package-lock.json ./
+COPY ./front-end-nextjs/package.json ./front-end-nextjs/package-lock.json ./
 
 RUN apk add --no-cache nodejs npm
 
