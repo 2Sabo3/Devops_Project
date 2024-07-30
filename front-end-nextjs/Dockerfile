@@ -8,7 +8,7 @@ RUN apk add --no-cache nodejs npm
 
 RUN npm install
 
-COPY . .
+COPY ./front-end-nextjs .
 
 RUN npm run build
 
