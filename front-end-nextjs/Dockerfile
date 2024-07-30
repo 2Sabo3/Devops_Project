@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM node:16-alpine
 
 WORKDIR /front-end-nextjs
 
