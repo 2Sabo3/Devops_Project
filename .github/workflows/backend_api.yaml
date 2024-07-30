@@ -31,7 +31,7 @@ jobs:
               env: 
                 ECR_REGISTRY: ${{steps.login-ecr.outputs.resgistry }}
                 ECR_REPOSITORY: backend_api
-                IMAGE_TAG: backend_api_latest
+                IMAGE_TAG: latest
               run: docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . --file ./api/Dockerfile
             - name: Push images to Amazon ECR
               env: 
