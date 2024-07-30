@@ -1,4 +1,4 @@
-name: "Backend CICD File"
+name: "Frontend CICD File"
 
 
 on: 
@@ -30,12 +30,8 @@ jobs:
             - name: Build and tag images to Amazon ECR
               env: 
                 ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-                ECR_REPOSITORY: backend_api
+                ECR_REPOSITORY: frontend_api
                 IMAGE_TAG: latest
               run: |
-                docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . --file ./api/Dockerfile
+                docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG . --file ./front-end-nestjs/Dockerfile
                 docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
-                
-
-
-
