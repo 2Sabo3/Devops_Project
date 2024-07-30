@@ -37,7 +37,7 @@ jobs:
               env: 
                 ECR_REGISTRY: ${{steps.login-ecr.outputs.resgistry }}
                 ECR_REPOSITORY: backend_api
-                IMAGE_TAG: backend_api:$(date +%s)
+                IMAGE_TAG: latest
               run: docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
                 
 
