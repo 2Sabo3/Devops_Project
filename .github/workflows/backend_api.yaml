@@ -13,6 +13,6 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - uses: actions/checkout@4
+            - uses: actions/checkout@v4
             - name: Build docker image
               run: docker build ../api --file Dockerfile --tag backend_api:$(date +%s)
