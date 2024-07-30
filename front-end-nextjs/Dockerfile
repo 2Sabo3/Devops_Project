@@ -2,11 +2,13 @@ FROM alpine:latest
 
 WORKDIR /front-end-nextjs
 
-COPY . .
+COPY package*.json ./
 
 RUN apk add --no-cache nodejs npm
 
-RUN npm install ./front-end-nextjs/package.json
+RUN npm install
+
+COPY . .
 
 RUN npm run build
 
