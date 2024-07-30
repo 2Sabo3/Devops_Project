@@ -1,8 +1,8 @@
-FROM node:16-alpine
+FROM alpine:latest
 
-WORKDIR /app
+WORKDIR /front-end-nextjs
 
-COPY package*.json ./
+COPY package.json package-lock.json ./
 
 RUN apk add --no-cache nodejs npm
 
