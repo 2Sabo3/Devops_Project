@@ -2,9 +2,8 @@ FROM alpine:latest
 
 WORKDIR /api
 
-COPY . .
+COPY ./api .
 
-RUN cd ./api
 RUN apk update
 
 RUN apk add --no-cache python3 py3-pip && python3 -m venv .venv 
