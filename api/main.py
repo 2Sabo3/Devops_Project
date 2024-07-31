@@ -8,8 +8,8 @@ import os
 # Loading Environment variable (AWS Access Key and Secret Key)
 from dotenv import load_dotenv
 load_dotenv()
-aws_access_key = os.getenv['AWS_ACCESS_KEY_ID']
-aws_secret_key = os.getenv['AWS_SECRET_ACCESS_KEY']
+aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
+aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 
 app = FastAPI()
@@ -34,6 +34,7 @@ s3 = boto3.client('s3',aws_access_key_id= aws_access_key, aws_secret_access_key=
 
 @app.post("/generate-qr/")
 async def generate_qr(request: Request ,url: str = Query()):
+    
     try:
         # Generate QR Code
         qr = qrcode.QRCode(
