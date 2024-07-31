@@ -10,10 +10,12 @@ RUN npm install
 
 COPY ./front-end-nextjs .
 
+
 RUN npm run build
 
 CMD ["sh","-c","npm start"]
 
 EXPOSE 3000
+
 
 
