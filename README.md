@@ -28,7 +28,7 @@ Deploying the images on EKS Cluster.
 
 ## Author
 
-[Rishab Kumar](https://github.com/rishabkumar7)
+Application Code - [Rishab Kumar](https://github.com/rishabkumar7)
 
 ## License
 
