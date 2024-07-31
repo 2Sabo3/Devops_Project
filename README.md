@@ -26,10 +26,3 @@ Making IaC code for the EKS Cluster and deploying it via Terraform CI CD
 
 Deploying the images on EKS Cluster.
 
-## Author
-
-Application Code - [Rishab Kumar](https://github.com/rishabkumar7)
-
-## License
-
-[MIT](./LICENSE)
