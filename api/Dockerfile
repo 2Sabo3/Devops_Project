@@ -4,6 +4,7 @@ WORKDIR /api
 
 COPY . .
 
+RUN cd ./api
 RUN apk update
 
 RUN apk add --no-cache python3 py3-pip && python3 -m venv .venv 
