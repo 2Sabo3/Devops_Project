@@ -12,8 +12,6 @@ COPY ./front-end-nextjs .
 
 RUN npm run build
 
-RUN cd ./front-end-nextjs
-
 CMD ["sh","-c","npm start"]
 
 EXPOSE 3000
