@@ -8,8 +8,8 @@ import os
 # Loading Environment variable (AWS Access Key and Secret Key)
 from dotenv import load_dotenv
 load_dotenv()
-aws_access_key = os.getenv('AWS_ACCESS_KEY')
-aws_secret_key = os.getenv('AWS_SECRET_KEY')
+aws_access_key = os.environ['AWS_ACCESS_KEY_ID']
+aws_secret_key = os.environ['AWS_SECRET_ACCESS_KEY']
 
 
 app = FastAPI()
