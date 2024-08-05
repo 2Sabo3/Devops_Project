@@ -7,9 +7,9 @@ import os
 
 # Loading Environment variable (AWS Access Key and Secret Key)
 #from dotenv import load_dotenv
-#load_dotenv()
-#aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
-#aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
+load_dotenv()
+aws_access_key = os.getenv("AWS_ACCESS_KEY_ID")
+aws_secret_key = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 
 app = FastAPI()
@@ -28,8 +28,8 @@ app.add_middleware(
 
 # AWS S3 Configuration
 bucket_name = 'devop-project' # Add your bucket name here
-#s3 = boto3.client('s3',aws_access_key_id= aws_access_key, aws_secret_access_key=aws_secret_key)
-s3 = boto3.client('s3')
+s3 = boto3.client('s3',aws_access_key_id= aws_access_key, aws_secret_access_key=aws_secret_key)
+#s3 = boto3.client('s3')
 
 
 @app.post("/generate-qr/")
