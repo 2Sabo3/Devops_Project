@@ -2,7 +2,14 @@ FROM alpine:latest
 
 WORKDIR /api
 
+#ARG AWS_ACCESS_KEY
+#ARG AWS_SECRET_KEY
+#ENV ${AWS_ACCESS_KEY}=AWS_ACCESS_KEY
+#ENV ${AWS_SECRET_KEY}=AWS_SECRET_KEY
+
 COPY ./api .
+
+#COPY . .
 
 RUN apk update
 
